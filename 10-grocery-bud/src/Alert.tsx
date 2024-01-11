@@ -9,13 +9,13 @@ type AlertProps = {
   list: Item[];
   msg: string;
   type: string;
-  removeAlert: () => void;
+  showAlert: () => void;
 };
 
-const Alert = ({ msg, removeAlert, type, list }: AlertProps) => {
+const Alert = ({ msg, showAlert, type, list }: AlertProps) => {
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      removeAlert();
+      showAlert();
     }, 3000);
     return () => clearTimeout(timeOut);
   }, [list]);
