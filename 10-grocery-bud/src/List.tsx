@@ -7,15 +7,15 @@ type Item = {
 };
 
 type ListProps = {
-  items: Item[];
+  list: Item[];
   removeItem: (id: string) => void;
   editItem: (id: string) => void;
 };
 
-const List = ({ items, removeItem, editItem }: ListProps) => {
+const List = ({ list, removeItem, editItem }: ListProps) => {
   return (
     <div className="grocery-list">
-      {items.map((item) => {
+      {list.map((item) => {
         const { id, title } = item;
         return (
           <article className="grocery-item" key={id}>
