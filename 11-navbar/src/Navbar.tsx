@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "./data";
 import logo from "./logo.svg";
-type Props = {};
 
-const Navbar = (props: Props) => {
-  const [showLinks, setShowLinks] = useState(false);
+const Navbar = () => {
+  const [showLinks, setShowLinks] = useState<boolean>(false);
   const linksContainerRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLUListElement>(null);
 
@@ -15,6 +14,7 @@ const Navbar = (props: Props) => {
 
   useEffect(() => {
     const linksHeight = linksRef.current?.getBoundingClientRect().height;
+    console.log("linksHeight", linksHeight);
     if (showLinks) {
       linksContainerRef.current!.style.height = `${linksHeight}px`;
     } else {
