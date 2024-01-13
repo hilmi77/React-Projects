@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaBehance } from "react-icons/fa";
 
 interface LinkItem {
   id: number;
@@ -54,5 +54,10 @@ export const social: SocialItem[] = [
     id: 3,
     url: "https://www.linkedin.com",
     icon: <FaLinkedin />,
+  },
+  {
+    id: 4,
+    url: "https://www.behance.com",
+    icon: <FaBehance />,
   },
 ];
