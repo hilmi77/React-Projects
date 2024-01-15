@@ -13,14 +13,11 @@ interface AppContextInterface {
   closeSidebar: () => void;
   openSubmenu: (
     text: string,
-    coordinates: { top: number; center: number }
+    coordinates: { bottom: number; center: number }
   ) => void;
   closeSubmenu: () => void;
-  page: {
-    page: string;
-    links: { label: string; icon: JSX.Element; url: string }[];
-  };
-  location: { top: number; center: number } | {};
+  page: Sublinks;
+  location: { bottom: number; center: number } | {};
 }
 
 const AppContext = createContext<AppContextInterface | undefined>(undefined);
@@ -33,9 +30,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState<Sublinks>({ page: "", links: [] });
-  const [location, setLocation] = useState<
-    { top: number; center: number } | {}
-  >({});
+  const [location, setLocation] = useState({});
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -47,7 +42,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
 
   const openSubmenu = (
     text: string,
-    coordinates: { top: number; center: number }
+    coordinates: { bottom: number; center: number }
   ) => {
     const page = sublinks.find((link) => text === link.page);
     if (page) {
