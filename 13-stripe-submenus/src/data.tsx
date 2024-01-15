@@ -32,3 +32,5 @@ const sublinks: Sublinks[] = [
     ],
   },
 ];
+
+export default sublinks;
