@@ -1,17 +1,5 @@
-import React, { useState, useRef, useEffect, FC } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context/context";
-
-type GlobalContext = {
-  isSubmenuOpen: boolean;
-  page: { page: string; links: Link[] };
-  location: { center: number; bottom: number };
-};
-
-type Link = {
-  url: string;
-  icon: JSX.Element;
-  label: string;
-};
 
 const Submenu = () => {
   const {
