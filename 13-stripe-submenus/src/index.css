@@ -163,7 +163,7 @@ Stripe Styles
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius);
   border-color: transparent;
-  color: white;
+  color:white;
   background: var(--clr-black);
   cursor: pointer;
   transition: var(--transition);
