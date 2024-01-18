@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useContext,
-  createContext,
-  useReducer,
-  useEffect,
-} from "react";
+import React, { useContext, createContext, useReducer, useEffect } from "react";
 import axios from "axios";
 import cartItems from "../data";
 import reducer from "../reducer";
@@ -16,16 +10,6 @@ type CartItems = {
   img: string;
   amount: number;
 };
-
-type Action =
-  | { type: "CLEAR_CART" }
-  | { type: "REMOVE"; payload: number }
-  | { type: "INCREASE"; payload: number }
-  | { type: "DECREASE"; payload: number }
-  | { type: "GET_TOTALS" }
-  | { type: "LOADING" }
-  | { type: "DISPLAY_ITEMS"; payload: CartItems[] }
-  | { type: "TOGGLE_AMOUNT"; payload: { id: number; type: "inc" | "dec" } };
 
 type CartState = {
   cart: CartItems[];
