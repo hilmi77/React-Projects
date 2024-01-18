@@ -33,9 +33,6 @@ const CartContainer = () => {
       <section className="cart">
         <header>
           <h2>your bag</h2>
-          <button className="btn clear-btn" onClick={clearCart}>
-            clear cart
-          </button>
         </header>
         <h4>is currently empty</h4>
       </section>
@@ -59,6 +56,9 @@ const CartContainer = () => {
             total <span>${total}</span>
           </h4>
         </div>
+        <button className="btn clear-btn" onClick={clearCart}>
+          clear cart
+        </button>
       </footer>
     </section>
   );
