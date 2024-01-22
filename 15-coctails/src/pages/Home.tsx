@@ -1,7 +1,13 @@
-import React from "react";
+import CoctailList from "../components/CoctailList";
+import SearchForm from "../components/SearchForm";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main>
+      <SearchForm />
+      <CoctailList />
+    </main>
+  );
 };
 
 export default Home;

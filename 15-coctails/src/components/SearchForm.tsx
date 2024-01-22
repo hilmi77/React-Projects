@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useGlobalContext } from "../context/context";
 
 const SearchForm = () => {
