@@ -24,7 +24,7 @@ interface User {
 }
 
 const App = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [person, setPerson] = useState<User | null>(null);
   const [title, setTitle] = useState<string>("name");
   const [value, setValue] = useState<string>("random person");
