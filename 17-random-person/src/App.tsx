@@ -53,12 +53,12 @@ const App = () => {
         image,
       };
       setPerson(newPerson);
+      setLoading(false);
       setTitle("name");
       setValue(newPerson.name);
     } catch (error) {
       console.log(error);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
